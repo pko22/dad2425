@@ -12,16 +12,16 @@ Este tema no dispone de ejemplos o ejercicios en código.
 
 ### Parte 2. Desarrollo de aplicaciones web: Java, Spring y MySQL
 * Tema 1: Desarrollo web con Spring
-* Tema 2: Bases de datos con Spring
-* Tema 3: Seguridad en Spring
-* Tema 4: Despliegue Spring
+* Tema 2: APIs REST con Spring
+* Tema 3: Bases de datos con Spring
+* Tema 4: Seguridad en Spring
+* Tema 5: Despliegue Spring
 
 Los ejemplos y ejercicios de esta parte pueden encontrarse en [Parte 2](parte_2)
 
 ### Parte 3. Tecnologías de comunicación de aplicaciones distribuidas
-* Tema 1: APIs REST con Spring
-* Tema 2: Comunicación mediante colas de mensajes
-* Tema 3: Protocolos de comunicación de bajo nivel
+* Tema 1: Comunicación mediante colas de mensajes
+* Tema 2: Protocolos de comunicación de bajo nivel
 
 Los ejemplos y ejercicios de esta parte pueden encontrarse en [Parte 3](parte_3)
 
