@@ -20,7 +20,7 @@ Este tema no dispone de ejemplos o ejercicios en código.
 Los ejemplos y ejercicios de esta parte pueden encontrarse en [Parte 2](parte_2)
 
 ### Parte 3. Tecnologías de comunicación de aplicaciones distribuidas
-* Tema 1: Comunicación mediante colas de mensajes
+* Tema 1: Comunicación mediante mensajes
 * Tema 2: Protocolos de comunicación de bajo nivel
 
 Los ejemplos y ejercicios de esta parte pueden encontrarse en [Parte 3](parte_3)
