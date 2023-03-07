@@ -19,8 +19,9 @@ services:
   lb:
     image: haproxy:2.7.3
     ports:
-      - "9090:80" # Only service that is exposed to the host is the lb 
+      - "9443:443" # Only service that is exposed to the host is the lb 
     volumes:
-      - "./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro"
+      - "./haproxy-ssl.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro"
+      - "./mydomain.pem:/etc/cert/server.pem:ro"
     restart: unless-stopped
     
