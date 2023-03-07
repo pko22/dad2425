@@ -7,10 +7,10 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import es.sidelab.model.Anuncio;
@@ -27,18 +27,18 @@ public class AnuncioController {
 		repository.save(anuncio);
 	}
 	
-	@RequestMapping(value = "/anuncios", method = RequestMethod.GET)
+	@GetMapping(value = "/anuncios")
 	public List<Anuncio> getAnuncios() {
 		return repository.findAll();
 	}
 	
-	@RequestMapping(value = "/anuncios", method = RequestMethod.POST)
+	@PostMapping(value = "/anuncios")
 	public ResponseEntity<Boolean> addAnuncio(@RequestBody Anuncio anuncio) {
 		repository.save(anuncio);
 		return new ResponseEntity<Boolean>(HttpStatus.CREATED);
 	}
 	
-	@RequestMapping(value = "/anuncio/{name}")
+	@GetMapping(value = "/anuncio/{name}")
 	public Anuncio getAnuncio(@PathVariable(value = "name") String name) {
 		return repository.findByNombre(name);
 	}
