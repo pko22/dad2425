@@ -1,0 +1,29 @@
+version: '3'
+services:
+  db: 
+    image: mysql:8
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=books
+  web:
+    build: web/.
+    expose: 
+      - "8443"
+    ports:
+      - 8443:8443
+    restart: unless-stopped
+    environment:
+      - SPRING_RABBITMQ_HOST=broker
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db/books
+      - APP_SERVICIO_REST=rest
+  rest:
+    build: servicio-interno-rest/.
+    expose:
+      - "8080"
+  broker:
+    image: rabbitmq
+  rabbitmq:
+    build: servicio-interno-rabbitmq/.
+    environment:
+      - SPRING_RABBITMQ_HOST=broker
+
