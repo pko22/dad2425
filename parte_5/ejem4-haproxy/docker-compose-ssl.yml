@@ -9,6 +9,9 @@ services:
     links:
       - db
     restart: unless-stopped # Restart the container. Necessary to avoid problems if the app starts before the db is ready 
+    deploy:
+      mode: loadbalancer
+      replicas: 2
   db:
     image: mysql:8
     environment:
