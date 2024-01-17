@@ -6,31 +6,33 @@ El contenido del repositorio se distribuye bajo licencia [Apache-2.0](https://gi
 
 ## El temario de la asignatura se divide en 5 partes
 
-### Parte 1: Patrones arquitectónicos de aplicaciones distribuidas
+### Tema 1: Patrones arquitectónicos de aplicaciones distribuidas
 
-* Tema 1: Introducción a las aplicaciones distribuidas
-* Tema 2: Patrones arquitectónicos de aplicaciones distribuidas
+* Tema 1.1: Introducción a las aplicaciones distribuidas
+* Tema 1.2: Patrones arquitectónicos de aplicaciones distribuidas
 
 Este tema no dispone de ejemplos o ejercicios en código.
 
-### Parte 2. Desarrollo de aplicaciones web: Java, Spring y MySQL
+### Tema 2. Desarrollo de aplicaciones y servicios web
 
-* Tema 1: Desarrollo web con Spring
-* Tema 2: APIs REST con Spring
-* Tema 3: Bases de datos con Spring
-* Tema 4: Seguridad en Spring
-* Tema 5: Despliegue Spring
+* Tema 2.1: Spring y Maven
+* Tema 2.2: Aplicaciones Web con Spring
+* Tema 2.3: APIs REST con Spring
+* Tema 2.4: Introducción a las Bases de datos
+* Tema 2.5: Bases de datos SQL en Spring
+* Tema 2.6: Construcción y despliegue
+* Tema 2.7: Seguridad en Spring
 
 Los ejemplos y ejercicios de esta parte pueden encontrarse en [Parte 2](https://github.com/codeurjc/dad/tree/main/parte_2)
 
-### Parte 3. Tecnologías de comunicación de aplicaciones distribuidas
+### Tema 3. Comunicación de aplicaciones distribuidas
 
-* Tema 1: Comunicación mediante mensajes
-* Tema 2: Protocolos de comunicación de bajo nivel
+* Tema 1: Comunicación de aplicaciones: RPC
+* Tema 2: Comunicación de aplicaciones: Mensajes
 
 Los ejemplos y ejercicios de esta parte pueden encontrarse en [Parte 3](https://github.com/codeurjc/dad/tree/main/parte_3)
 
-### Parte 4. Despliegue de aplicaciones web
+### Tema 4. Despliegue de aplicaciones web
 
 * Tema 1. Virtualización, Cloud Computing y Contenedores
 * Tema 2. Docker
@@ -39,7 +41,7 @@ Los ejemplos y ejercicios de esta parte pueden encontrarse en [Parte 3](https://
 
 Los ejemplos y ejercicios de esta parte pueden encontrarse en [Parte 4](https://github.com/codeurjc/dad/tree/main/parte_4)
 
-### Parte 5. Escalabilidad y tolerancia a fallos
+### Tema 5. Escalabilidad y tolerancia a fallos
 * Tema 1. Introducción
 * Tema 2. Cliente/Servidor
 * Tema 3. Servidor con caché
