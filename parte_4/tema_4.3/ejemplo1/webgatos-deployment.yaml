@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webgatos
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webgatos  
+  template: # Pod definition
+    metadata:
+      labels:
+        app: webgatos
+    spec:
+      containers:
+      - name: webgatos
+        image: mastercloudapps/webgatos:v1.0
+        ports:
+        - containerPort: 5000
