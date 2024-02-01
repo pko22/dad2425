@@ -111,7 +111,7 @@ Para verificar que el clúster k3s funciona correctamente, se puede desplegar un
 > deployment.apps/hello-node created
 ```
 
-`$ kubectl expose deployment hello-node --type=LoadBalancer --port=8080`
+`$ kubectl expose deployment hello-node --port=8080`
 
 ```
 > service/hello-node exposed
