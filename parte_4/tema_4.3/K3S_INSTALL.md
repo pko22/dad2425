@@ -105,28 +105,37 @@ Se puede verificar que la conexión es correcta ejecutando un comando de consult
 
 Para verificar que el clúster k3s funciona correctamente, se puede desplegar una aplicación de ejemplo con los siguientes comandos:
 
-`$ kubectl create deployment hello-node --image=registry.k8s.io/e2e-test-images/agnhost:2.39 -- /agnhost netexec --http-port=8080`
+`$ kubectl create deployment webapp --image=mastercloudapps/webapp:v1.0`
 
 ```
-> deployment.apps/hello-node created
+> deployment.apps/webapp created
 ```
 
-`$ kubectl expose deployment hello-node --port=8080`
+`$ kubectl expose deployment webapp --port=8080`
 
 ```
-> service/hello-node exposed
+> service/webapp exposed
 ```
 
-`$ kubectl create ingress hello-node-ingress --rule='/=hello-node:8080'`
+Una vez desplegada la aplicación mediante `Deployment` y `Service` se puede crear un Ingress usando la línea de comandos:
 
-Una vez desplegada la aplicación mediante `Deployment` y `Service`) y configurado el `Ingress` se puede acceder a la aplicación usando su IP floante:
+`$ kubectl create ingress webapp --rule='/=webapp:8080'`
+
+Ahora la aplicación está disponible accediendo a la IP flotante:
 
 `$ curl http://$FLOAT_IP/`
 
 ```
->NOW: 2024-01-24 12:17:38.710226309 +0000 UTC m=+419.756055875
+{"path":"/","host":"10.42.0.11:8080","from":"10.42.0.8","version":"v1.0"}
 ```
 
 Una vez verificado el correcto funcionamiento de la aplicación, se puede eliminar del clúster:
 
 `$ kubectl delete service,deployment,ingress --all`
+
+```
+service "kubernetes" deleted
+service "webapp" deleted
+deployment.apps "webapp" deleted
+ingress.networking.k8s.io "webapp" deleted
+```
