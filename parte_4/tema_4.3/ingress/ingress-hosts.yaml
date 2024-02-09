@@ -4,7 +4,8 @@ metadata:
   name: mastercloudapps
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /$1
-spec:  
+spec:
+  ingressClassName: nginx
   rules:
    - host: www.mastercloudappsgatos.com
      http:
@@ -20,7 +21,7 @@ spec:
      http:
       paths:
       - path: /(.*)
-        pathType: Prefix
+        pathType: ImplementationSpecific
         backend:
           service:
             name: webappanuncios
