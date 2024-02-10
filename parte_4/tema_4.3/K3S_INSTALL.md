@@ -44,11 +44,13 @@ Conexión por SSH (Windows PowerShell (abrir como Administrador)):
 
 `> $sshfile = "ssh_key.pem"`
 
+`> $FLOAT_IP=10.100.139.50` 
+
 `> icacls $sshfile /reset`
 
 `> icacls $sshfile /grant:r "$($env:username):(R)"`
 
-`> ssh -i $sshfile ubuntu@10.100.139.50`
+`> ssh -i $sshfile ubuntu@$FLOAT_IP`
 
 Actualización de ubuntu:
 
@@ -84,9 +86,13 @@ Se cierra la conexión SSH de la máquina:
 
 `$ exit`
 
-Una vez cerrada la conexión SSH con la máquina, se copia el fichero `kubeconfig` a la máquina del administrador:
+Una vez cerrada la conexión SSH con la máquina, se copia el fichero `kubeconfig` a la máquina del administrador (Bash):
 
 `$ scp -i ssh_key.pem ubuntu@$FLOAT_IP:kubeconfig .`
+
+En Windows PowerShell:
+
+`> scp -i $sshfile "ubuntu@$($FLOAT_IP):kubeconfig" .`
 
 ## Administración remota de k3s
 
@@ -98,9 +104,15 @@ En la máquina del administrador, si es linux y no se dispone ya del comando `ku
 
 `$ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl`
 
-Para conectar `kubectl` con el clúster k3s recién instalado, se puede configurar la variable de entorno:
+En Windows, si has instalado Docker Desktop este viene con kubectl también instalado. Si no, se pueden seguir [estas instrucciones](https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/).
+
+Para conectar `kubectl` con el clúster k3s recién instalado, se puede configurar la variable de entorno (Bash):
 
 `$ export KUBECONFIG=./kubeconfig`
+
+Windows PowerShell:
+
+`> $KUBECONFIG=./kubeconfig`
 
 Se puede verificar que la conexión es correcta ejecutando un comando de consulta de los nodos:
 
