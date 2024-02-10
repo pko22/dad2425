@@ -32,13 +32,23 @@ Para poder instalar k3s, primero hay que conectarse por SSH a la máquina.
 
 Como el usuario por defecto es `ubuntu`, si asumimos una la IP flotante 10.100.139.50 y un fichero de claves `ssh_key.pem` se ejecutarán los siguientes comandos:
 
-Conexión por SSH:
+Conexión por SSH (Bash):
 
 `$ chmod 0400 ssh_key.pem`
 
 `$ export FLOAT_IP=10.100.139.50` 
 
 `$ ssh -i ssh_key.pem ubuntu@$FLOAT_IP`
+
+Conexión por SSH (Windows PowerShell (abrir como Administrador)):
+
+`> $sshfile = "ssh_key.pem"`
+
+`> icacls $sshfile /reset`
+
+`> icacls $sshfile /grant:r "$($env:username):(R)"`
+
+`> ssh -i $sshfile ubuntu@10.100.139.50`
 
 Actualización de ubuntu:
 
