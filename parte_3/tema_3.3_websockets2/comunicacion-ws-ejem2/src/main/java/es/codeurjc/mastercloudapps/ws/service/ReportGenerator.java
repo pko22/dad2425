@@ -1,4 +1,4 @@
-package es.codeurjc.mastercloudapps.ws;
+package es.codeurjc.mastercloudapps.ws.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

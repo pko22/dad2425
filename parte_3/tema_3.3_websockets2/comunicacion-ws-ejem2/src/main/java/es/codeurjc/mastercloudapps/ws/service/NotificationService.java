@@ -1,7 +1,10 @@
-package es.codeurjc.mastercloudapps.ws;
+package es.codeurjc.mastercloudapps.ws.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import es.codeurjc.mastercloudapps.ws.model.Report;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;

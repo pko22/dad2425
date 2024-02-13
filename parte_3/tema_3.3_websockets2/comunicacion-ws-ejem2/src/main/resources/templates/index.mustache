@@ -4,6 +4,7 @@
 <form action="create-report" method="post">
     <p>Report creation data:</p>
     <input type='text' name='reportCreationData'/>
+    <input type='hidden' name='_csrf' value='{{token}}'/>
 
     <input type='submit' value='Create'/>
 </form>

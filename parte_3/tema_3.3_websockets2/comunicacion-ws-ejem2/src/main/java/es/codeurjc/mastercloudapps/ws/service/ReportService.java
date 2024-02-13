@@ -1,9 +1,10 @@
-package es.codeurjc.mastercloudapps.ws;
+package es.codeurjc.mastercloudapps.ws.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
+import es.codeurjc.mastercloudapps.ws.model.Report;
+import es.codeurjc.mastercloudapps.ws.repository.ReportRepository;
 
 @Service
 public class ReportService {

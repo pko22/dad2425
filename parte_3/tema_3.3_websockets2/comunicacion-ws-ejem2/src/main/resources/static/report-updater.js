@@ -2,7 +2,7 @@ window.addEventListener('load', (event) => {
 
     console.log("WebSocket")
 
-    let socket = new WebSocket("ws://"+window.location.host+"/notifications?reportId="+reportId);
+    let socket = new WebSocket("wss://"+window.location.host+"/notifications?reportId="+reportId);
 
     socket.onmessage = function (event) {
 
