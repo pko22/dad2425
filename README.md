@@ -2,7 +2,7 @@
 
 En este repositorio se encuentra el código con ejemplos y ejercicios resueltos de las diferentes partes de la asignatura "Desarrollo de Aplicaciones Distribuidas" del Grado en Ingeniería de Computadores de la ETSII URJC.
 
-El contenido del repositorio se distribuye bajo licencia [Apache-2.0](https://github.com/codeurjc/dad/blob/main/LICENSE).
+El contenido del repositorio se distribuye bajo licencia [Apache-2.0](https://github.com/codeurjc/dad2425/blob/main/LICENSE).
 
 ## El temario de la asignatura se divide en 5 partes
 
@@ -21,26 +21,32 @@ Este tema no dispone de ejemplos o ejercicios en código.
 * Tema 2.4: Introducción a las Bases de datos
 * Tema 2.5: Bases de datos SQL en Spring
 * Tema 2.6: Construcción y despliegue
-* Tema 2.7: Seguridad en Spring
 
-Los ejemplos y ejercicios de esta parte pueden encontrarse en [Parte 2](https://github.com/codeurjc/dad/tree/main/parte_2)
+Los ejemplos y ejercicios de esta parte pueden encontrarse en [Parte 2](https://github.com/codeurjc/dad2425/tree/main/parte_2)
 
 ### Tema 3. Comunicación de aplicaciones distribuidas
 
-* Tema 1: Comunicación de aplicaciones: RPC
-* Tema 2: Comunicación de aplicaciones: Mensajes
+* Tema 1: Comunicación de aplicaciones: Mensajes
+* Tema 2: Comunicación de aplicaciones: Websockets
 
-Los ejemplos y ejercicios de esta parte pueden encontrarse en [Parte 3](https://github.com/codeurjc/dad/tree/main/parte_3)
+Los ejemplos y ejercicios de esta parte pueden encontrarse en [Parte 3](https://github.com/codeurjc/dad2425/tree/main/parte_3)
 
 ### Tema 4. Despliegue y actualización de aplicaciones
 
 * Tema 4.1: Introducción
 * Tema 4.2: Docker
 * Tema 4.2.1: Docker Compose
-* Tema 4.3: Kubernetes
 
-Los ejemplos y ejercicios de esta parte pueden encontrarse en [Parte 4](https://github.com/codeurjc/dad/tree/main/parte_4)
+Los ejemplos y ejercicios de esta parte pueden encontrarse en [Parte 4](https://github.com/codeurjc/dad2425/tree/main/parte_4)
 
 ### Tema 5. Escalabilidad y tolerancia a fallos
 
-Los ejemplos y ejercicios de esta parte pueden encontrarse en [Parte 5](https://github.com/codeurjc/dad/tree/main/parte_5)
+* Tema 5.1: Introducción
+* Tema 5.2: Topología centralizada
+* Tema 5.3: Separación servidor y base de datos
+* Tema 5.4: Servidor con caché y base de datos
+* Tema 5.5: Balanceadores de carga: múltiples servidores
+* Tema 5.6: Replicación de bases de datos
+* Tema 5.7: Otras soluciones arquitectónicas
+
+Los ejemplos y ejercicios de esta parte pueden encontrarse en [Parte 5](https://github.com/codeurjc/dad2425/tree/main/parte_5)

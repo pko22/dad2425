@@ -2,7 +2,7 @@ package es.codeurjc.db;
 
 import java.util.List;
 
-import javax.annotation.PostConstruct;
+import jakarta.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -47,11 +47,21 @@ public class BlogController {
 		return blog;
 	}
 
-	//A comment only can be deleted if it has no associated blog
+	// A comment only can be deleted if it has no associated blog
+	// This method doesn't work
 	@DeleteMapping("/comments/{id}")
 	public Comment deleteComment(@PathVariable Long id) {
 		Comment comment = commentRepository.findById(id).orElseThrow();
 		commentRepository.deleteById(id);
+		return comment;
+	}
+
+	@DeleteMapping("/blogs/{blogId}/comments/{commentId}")
+	public Comment deleteComment(@PathVariable Long blogId, @PathVariable Long commentId) {
+		Blog blog = blogRepository.findById(blogId).orElseThrow();
+		Comment comment = commentRepository.findById(commentId).orElseThrow();
+		blog.getComments().remove(comment);
+		commentRepository.deleteById(commentId);
 		return comment;
 	}
 
